@@ -1,0 +1,20 @@
+<p>employee-management works!</p>
+<button (click)="getEmployees()">Get Employees</button>
+<table *ngIf="employees">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Name</th>
+      <th>salary</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td>{{ employee.id }}</td>
+      <td>{{ employee.employee_name }}</td>
+      <td>{{ employee.employee_salary }}</td>
+      <td>{{ employee.employee_age }}</td>
+    </tr>
+  </tbody>
+</table>
