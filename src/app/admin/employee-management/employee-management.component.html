@@ -1,20 +1,26 @@
-<p>employee-management works!</p>
 <button (click)="getEmployees()">Get Employees</button>
-<table *ngIf="employees">
+
+<table class="table table-striped" *ngIf="employees">
   <thead>
     <tr>
-      <th>id</th>
-      <th>Name</th>
-      <th>salary</th>
-      <th>age</th>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Salary</th>
+      <th scope="col">Age</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let employee of employees">
-      <td>{{ employee.id }}</td>
-      <td>{{ employee.employee_name }}</td>
-      <td>{{ employee.employee_salary }}</td>
-      <td>{{ employee.employee_age }}</td>
+      <th scope="row">{{ employee.id }}</th>
+      <td>
+        {{ employee.employee_name }}
+      </td>
+      <td>
+        {{ employee.employee_salary }}
+      </td>
+      <td>
+        {{ employee.employee_age }}
+      </td>
     </tr>
   </tbody>
 </table>
