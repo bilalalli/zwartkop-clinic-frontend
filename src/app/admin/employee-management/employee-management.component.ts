@@ -22,11 +22,9 @@ export class EmployeeManagementComponent implements OnInit {
   }
 
   public getEmployees() {
-    this.api
-      .get('http://dummy.restapiexample.com/api/v1/employees', { page: 1 })
-      .subscribe((response: any) => {
-        this.employees = response.data;
-        console.log(this.employees);
-      });
+    this.api.get('https://localhost:7191/Pizza').subscribe((response: any) => {
+      this.employees = response.data;
+      console.log(this.employees);
+    });
   }
 }
